@@ -1,0 +1,4 @@
+server:
+  port: 7901
+user:
+  userServicePath: http://127.0.0.1:7900/sample/  

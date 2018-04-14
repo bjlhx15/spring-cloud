@@ -1,0 +1,13 @@
+#server.port: 指明了应用启动的端口号
+#eureka.client.registerWithEureka: 值为false意味着自身仅作为服务器，不作为客户端
+#eureka.client.fetchRegistry: 值为false意味着无需注册自身
+#eureka.client.serviceUrl.defaultZone: 指明了应用的URL
+
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
