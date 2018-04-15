@@ -3,11 +3,20 @@
 #eureka.client.fetchRegistry: 值为false意味着无需注册自身
 #eureka.client.serviceUrl.defaultZone: 指明了应用的URL
 
+security:
+  basic:
+    enabled: true #开启验证
+  user:
+    name: user #用户名
+    password: a123 #密码
+    
 server:
   port: 8761
 eureka:
   client:
+    healthcheck:
+      enabled: true
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://user:password@localhost:8761/eureka #http://localhost:8761/eureka

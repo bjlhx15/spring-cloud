@@ -10,6 +10,8 @@ spring:
     platform: mysql
     schema: classpath:schema.sql
     data: classpath:data.sql
+  application:
+    name: mircoservice-provider-user # 建议小写
 logging:
   level:
     root: info
@@ -17,3 +19,17 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
     org.hibernate.type.descriptor.sql.BasicExtractor: trace
     com.lhx: debug
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:a123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: password
