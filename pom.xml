@@ -13,6 +13,7 @@
 
 	<modules>
 		<module>microservice-comsumer-movie</module>
+		<module>microservice-comsumer-movie-ribbon</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
 	</modules>
