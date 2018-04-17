@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.lhx.cloud.config.TestConfiguration;
 
 @SpringBootApplication
-@RibbonClient
+@RibbonClient(name = "microservice-provider-user", configuration = com.lhx.config.TestConfiguration.class)
 public class ConsumerMovieRibbonApplication {
 
 	@Bean

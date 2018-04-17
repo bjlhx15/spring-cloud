@@ -2,7 +2,6 @@ package com.lhx.config;
 
 import org.springframework.context.annotation.Configuration;
 
-import com.lhx.cloud.ExcludeFromComponentScan;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 

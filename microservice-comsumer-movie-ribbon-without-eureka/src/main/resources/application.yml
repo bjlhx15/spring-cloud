@@ -24,9 +24,10 @@ security:
   user:
     name: admin
     password: password
-microservice-provider-user:
-  ribbon:
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
-
     
+ribbon:
+  eureka:
+   enabled: false
+stores:
+  ribbon:
+    listOfServers: localhost:7900   

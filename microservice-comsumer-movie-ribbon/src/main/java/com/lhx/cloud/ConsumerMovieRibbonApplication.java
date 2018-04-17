@@ -14,7 +14,7 @@ import com.lhx.cloud.config.TestConfiguration;
 
 @SpringBootApplication
 @RibbonClient(name = "microservice-provider-user", configuration = com.lhx.config.TestConfiguration.class)
-@ComponentScan(excludeFilters= {@ComponentScan.Filter(type=FilterType.ANNOTATION,value=ExcludeFromComponentScan.class)})
+//@ComponentScan(excludeFilters= {@ComponentScan.Filter(type=FilterType.ANNOTATION,value=ExcludeFromComponentScan.class)})
 public class ConsumerMovieRibbonApplication {
 
 	@Bean
