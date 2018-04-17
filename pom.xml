@@ -14,6 +14,7 @@
 	<modules>
 		<module>microservice-comsumer-movie</module>
 		<module>microservice-comsumer-movie-ribbon</module>
+		<module>microservice-comsumer-movie-ribbon-properties-customizing</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
 	</modules>
