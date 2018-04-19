@@ -13,6 +13,7 @@
 
 	<modules>
 		<module>microservice-comsumer-movie</module>
+		<module>microservice-comsumer-movie-feign</module>
 		<module>microservice-comsumer-movie-ribbon</module>
 		<module>microservice-comsumer-movie-ribbon-properties-customizing</module>
 		<module>microservice-comsumer-movie-ribbon-without-eureka</module>
