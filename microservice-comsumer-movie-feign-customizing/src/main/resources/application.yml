@@ -19,3 +19,4 @@ logging:
 #  user:
 #    name: admin
 #    password: password  
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
