@@ -26,6 +26,10 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    metadata-map: 
+      zone: ABC # zone默认带的  eureka可以理解的数据
+      lihongxu: BBC # 自定义的 不会影响客户端行为
+    appname: USER-SERVICE-HAHA
 
 management:
   port: 11112   #actuator暴露接口使用的端口，为了和api接口使用的端口进行分离
