@@ -16,6 +16,7 @@
 		<module>microservice-comsumer-movie-feign</module>		
 		<module>microservice-comsumer-movie-feign-customizing</module>
 		<module>microservice-comsumer-movie-ribbon</module>
+		<module>microservice-comsumer-movie-ribbon-with-hystrix</module>
 		<module>microservice-comsumer-movie-ribbon-test</module>
 		<module>microservice-comsumer-movie-ribbon-properties-customizing</module>
 		<module>microservice-comsumer-movie-ribbon-without-eureka</module>
