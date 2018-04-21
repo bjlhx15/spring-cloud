@@ -10,7 +10,9 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
-
+logging:
+  level:
+    com.lhx.cloud.feign.UserFeignClient: DEBUG
 #security:
 #  basic:
 #    enabled: true
