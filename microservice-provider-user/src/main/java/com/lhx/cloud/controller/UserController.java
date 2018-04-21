@@ -1,5 +1,6 @@
 package com.lhx.cloud.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.common.collect.Lists;
 import com.lhx.cloud.entity.User;
 import com.lhx.cloud.repository.UserRepository;
 import com.netflix.appinfo.InstanceInfo;
@@ -59,5 +61,20 @@ public class UserController {
 	@GetMapping("/get-user")
 	public User getUser(User user) {
 	    return user;
+	}
+	
+
+	@GetMapping("/list-all")
+	public List<User> listAll(User user) {
+		ArrayList<User> arrayList = Lists.newArrayList();
+		User user1 = new User(1L,"zhangsan");
+		User user2 = new User(2L,"lisi");
+		User user3 = new User(3L,"wangwu");
+		User user4 = new User(4L,"zhaoliu");
+		arrayList.add(user1);
+		arrayList.add(user2);
+		arrayList.add(user3);
+		arrayList.add(user4);
+	    return arrayList;
 	}
 }
