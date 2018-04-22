@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-consumer-moive-ribbon # 建议小写
+    name: microservice-comsumer-movie-ribbon-with-hystrix-propagation # 建议小写
 server:
   port: 8010
   
