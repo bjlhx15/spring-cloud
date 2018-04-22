@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mircoservice-consumer-moive # 建议小写
+server:
+  port: 7901  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:a123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+feign.hystrix.enabled: true
+#security:
+#  basic:
+#    enabled: true
+#  user:
+#    name: admin
+#    password: password  
