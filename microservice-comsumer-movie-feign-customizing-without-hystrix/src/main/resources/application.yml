@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mircoservice-consumer-moive # 建议小写
+server:
+  port: 7901  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:a123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+logging:
+  level:
+    com.lhx.cloud.feign.UserFeignClient: DEBUG
+#security:
+#  basic:
+#    enabled: true
+#  user:
+#    name: admin
+#    password: password  
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+feign.hystrix.enabled: true

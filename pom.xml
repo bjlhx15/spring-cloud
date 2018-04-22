@@ -13,9 +13,10 @@
 
 	<modules>
 		<module>microservice-comsumer-movie</module>
-		<module>microservice-comsumer-movie-feign</module>		
+		<module>microservice-comsumer-movie-feign</module>	
+		<module>microservice-comsumer-movie-feign-with-hystrix</module>	
 		<module>microservice-comsumer-movie-feign-customizing</module>
-		<module>microservice-comsumer-movie-feign-with-hystrix</module>		
+		<module>microservice-comsumer-movie-feign-customizing-without-hystrix</module>				
 		<module>microservice-comsumer-movie-ribbon</module>
 		<module>microservice-comsumer-movie-ribbon-with-hystrix</module>
 		<module>microservice-comsumer-movie-ribbon-with-hystrix-propagation</module>
