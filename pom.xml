@@ -27,6 +27,7 @@
 		<module>microservice-comsumer-movie-ribbon-without-eureka</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
+		<module>microservice-gateway-zuul</module>
 		<module>microservice-discovery-eureka-ha</module>
 	</modules>
 	<parent>
