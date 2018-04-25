@@ -28,53 +28,53 @@ public class UserController {
 	@Autowired
 	private DiscoveryClient discoveryClient;
 
-	
 	@GetMapping("/sample/{id}")
 	public User findById(@PathVariable Long id) {
-		return userRepository.findOne(id);
+		return this.userRepository.findOne(id);
 	}
 
 	@GetMapping("/eureka-instance")
 	public String serviceUrl() {
-	    InstanceInfo instance = eurekaClient.getNextServerFromEureka("MIRCOSERVICE-PROVIDER-USER", false);
-	    return instance.getHomePageUrl();
+		InstanceInfo instance = this.eurekaClient.getNextServerFromEureka("MIRCOSERVICE-PROVIDER-USER", false);
+		return instance.getHomePageUrl();
 	}
+
 	@GetMapping("/eureka-info")
 	public ServiceInstance showInfo() {
-	    ServiceInstance serviceInstance = discoveryClient.getLocalServiceInstance();
-	    return serviceInstance;
+		ServiceInstance serviceInstance = this.discoveryClient.getLocalServiceInstance();
+		return serviceInstance;
 	}
+
 	@GetMapping("/eureka-url")
 	public Object serviceUrl2() {
-	    List<ServiceInstance> list = discoveryClient.getInstances("MIRCOSERVICE-PROVIDER-USER");
-	    if (list != null && list.size() > 0 ) {
-	        return list.get(0).getUri();
-	    }
-	    return null;
+		List<ServiceInstance> list = this.discoveryClient.getInstances("MIRCOSERVICE-PROVIDER-USER");
+		if ((list != null) && (list.size() > 0)) {
+			return list.get(0).getUri();
+		}
+		return null;
 	}
-	
+
 	@PostMapping("/user")
 	public User postUser(@RequestBody User user) {
-	    return user;
+		return user;
 	}
-	
+
 	@GetMapping("/get-user")
 	public User getUser(User user) {
-	    return user;
+		return user;
 	}
-	
 
 	@GetMapping("/list-all")
 	public List<User> listAll(User user) {
 		ArrayList<User> arrayList = Lists.newArrayList();
-		User user1 = new User(1L,"zhangsan");
-		User user2 = new User(2L,"lisi");
-		User user3 = new User(3L,"wangwu");
-		User user4 = new User(4L,"zhaoliu");
+		User user1 = new User(1L, "zhangsan");
+		User user2 = new User(2L, "lisi");
+		User user3 = new User(3L, "wangwu");
+		User user4 = new User(4L, "zhaoliu");
 		arrayList.add(user1);
 		arrayList.add(user2);
 		arrayList.add(user3);
 		arrayList.add(user4);
-	    return arrayList;
+		return arrayList;
 	}
 }

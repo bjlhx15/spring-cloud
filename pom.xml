@@ -28,6 +28,7 @@
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-gateway-zuul</module>
+		<module>microservice-gateway-zuul-reg-exp</module>
 		<module>microservice-discovery-eureka-ha</module>
 	</modules>
 	<parent>

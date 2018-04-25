@@ -11,7 +11,7 @@ spring:
     schema: classpath:schema.sql
     data: classpath:data.sql
   application:
-    name: microservice-provider-user # 建议小写
+    name: microservice-provider-user-v1 # 建议小写
 logging:
   level:
     root: info
