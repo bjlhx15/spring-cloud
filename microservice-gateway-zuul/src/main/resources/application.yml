@@ -9,27 +9,18 @@ eureka:
       defaultZone: http://user:a123@localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-
-zuul:
-  routes:
-    echo:       #名称任意
-      path: /microservice/**
-      serviceId: microservice-provider-user
-      stripPrefix: true
-
-hystrix:
-  command:
-    microservice-provider-user:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 10000
-
-microservice-provider-user: #微服务的ID
-  ribbon:
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    ListOfServers: http://localhost:7900,http://localhost:7901
-    ConnectTimeout: 1000
-    ReadTimeout: 3000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100    
+#zuul:
+#  routes:
+#    users:
+#      path: /myusers/**
+#      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+#      url: https://downstream
+management:
+  security:
+    enabled: false
+#    roles: ADMIN
+#security:
+#  user:
+#    name: admin
+#    password: 123456
+    
