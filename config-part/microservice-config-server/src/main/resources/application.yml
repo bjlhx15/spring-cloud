@@ -6,3 +6,9 @@ spring:
       server:
         git:
           uri: https://github.com/bjlhx15/spring-cloud-config-test-repo
+          repos:
+            spring-cloud-config-test-sample: https://github.com/bjlhx15/spring-cloud-config-test-sample
+            spring-cloud-config-test-special:
+              pattern: spring-cloud-config-test-special*/dev*,*spring-cloud-config-test-special*/test*
+              uri: https://github.com/bjlhx15/spring-cloud-config-test-special
+      
