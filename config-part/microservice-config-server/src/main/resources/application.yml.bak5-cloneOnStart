@@ -6,5 +6,8 @@ spring:
       server:
         git:
           uri: https://github.com/bjlhx15/spring-cloud-config-test-repo
-          username: ***
-          password: ***
+          cloneOnStart: true
+          searchPaths: 
+            - foo # foo 路徑
+            - bar # bar 路徑        
+      
